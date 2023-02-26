@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
 
 db.mongoose = mongoose;
-db.url = dbConfig.url;
+db.url = dbConfig.url || dbConfig.MONGODB_URI;
 db.tutorials = require("./tutorial.model.js")(mongoose);
 
 module.exports = db;
