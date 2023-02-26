@@ -4,6 +4,7 @@ mongoose.Promise = global.Promise;
 mongoose.set('strictQuery', true)
 
 const db = {};
+
 db.mongoose = mongoose;
 db.url = dbConfig.url;
 db.tutorials = require("./tutorial.model.js")(mongoose);
